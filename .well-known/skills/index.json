@@ -1,0 +1,17 @@
+{
+  "version": "1.0",
+  "skills": [
+    {
+      "name": "geolocate-me",
+      "description": "Answer any question about the user's real-world location or location history by calling the Geolocate Me MCP server.",
+      "version": "1.0.0",
+      "author": "Guleki",
+      "license": "MIT",
+      "website": "https://geolocateme.app",
+      "source": "https://github.com/linville-charlie/geolocate-me-skill",
+      "download": "https://github.com/linville-charlie/geolocate-me-skill/archive/refs/heads/main.tar.gz",
+      "manifest": "https://github.com/linville-charlie/geolocate-me-skill/blob/main/SKILL.md",
+      "tags": ["location", "gps", "mcp", "geolocation", "personal-data"]
+    }
+  ]
+}
