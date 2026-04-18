@@ -19,31 +19,35 @@ Compatible with any host that implements the [agentskills.io](https://agentskill
 
 ## Install
 
-### Hosts with a `skills` directory
+### Recommended — via the `skills` CLI
 
-Drop the `geolocate-me/` folder into your skills location. Examples:
+One command, works across every agent skills host:
 
-- **Hermes Agent**: `~/.hermes/skills/location/geolocate-me/`
+```bash
+npx skills add linville-charlie/geolocate-me-skill
+```
+
+The CLI auto-detects which of your installed agents (Claude Code, Cursor, Goose, Codex, Hermes Agent, and 40+ others) should receive the skill, copies it into the right directory, and you're done. Pass `-g` for user-level install, or `-a claude-code` to target a specific agent. See [skills.sh](https://skills.sh) and [github.com/vercel-labs/skills](https://github.com/vercel-labs/skills) for more options.
+
+### Manual install
+
+Drop the `geolocate-me/` folder into your host's skills location:
+
 - **Claude Code**: project `.claude/skills/geolocate-me/` or user-level `~/.claude/skills/geolocate-me/`
+- **Hermes Agent**: `~/.hermes/skills/location/geolocate-me/`
 - **Goose**: `~/.config/goose/skills/geolocate-me/`
 - **Others**: see your host's skill directory convention
 
-### Install from GitHub
+Or clone directly:
 
 ```bash
 # Claude Code / user level
 mkdir -p ~/.claude/skills && git clone https://github.com/linville-charlie/geolocate-me-skill ~/.claude/skills/geolocate-me
-
-# Hermes
-mkdir -p ~/.hermes/skills/location && git clone https://github.com/linville-charlie/geolocate-me-skill ~/.hermes/skills/location/geolocate-me
 ```
 
-### Install from the discovery directory
+### Auto-discovery from geolocateme.app
 
-If your host pulls from [skills.sh](https://skills.sh) or `/.well-known/skills/index.json`:
-
-- Look up `geolocate-me` in the directory
-- Install via your host's UI
+If your host supports `/.well-known/skills/index.json` discovery, point it at `https://geolocateme.app` and the skill will appear in its install list.
 
 ## Verify
 
